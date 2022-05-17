@@ -1,0 +1,6 @@
+version: "3"
+services:
+  jcss:
+    build: .
+    ports:
+      - "28888:80"
