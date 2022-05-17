@@ -18,7 +18,8 @@ async def ocr(image: UploadFile):
     im = Image.open(image.file)
     text = pytesseract.image_to_string(im)
     return {
+        'status': 'Success',
         'data': {
-            'predict': text.strip()
+            'prediction': text.strip()
         }
     }
