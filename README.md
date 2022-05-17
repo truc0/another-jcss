@@ -4,7 +4,7 @@ This project is a captcha solver based on [tessereact-ocr](https://tesseract-ocr
 
 It has lower accurency than [PhotonQuantum/jcss-rs](https://github.com/PhotonQuantum/jcss-rs) but may have higher availability since it works for different image size.
 
-JCSS stands for jAccoutn Captcha Solver Service.
+JCSS stands for jAccount Captcha Solver Service.
 
 ## Usage
 

@@ -1,11 +1,11 @@
-FROM python:3.9
+FROM python:3.9-alpine
 
 WORKDIR /code
 
 COPY . /code
 
-RUN apt update && apt install -qq -y tesseract-ocr
+RUN apk add --update tesseract-ocr build-base
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install setuptools && pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
